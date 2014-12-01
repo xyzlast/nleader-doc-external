@@ -15,6 +15,7 @@ var express = require('express'),
 //   }
 // });
 
+console.log('connect use tds');
 var tds = require('tds');
 var conn = new tds.Connection({
   host: '222.111.242.137',
@@ -24,7 +25,7 @@ var conn = new tds.Connection({
   database: 'WorkCrewNET60c'
 });
 conn.connect(function(error) {
-  if (error != null) {
+  if(error != null) {
     console.error('Received error', error);
   } else {
     console.log('Now connected, can start using');
